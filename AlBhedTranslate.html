@@ -31,6 +31,7 @@
    let charAlBhed = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "];
 
    function trsnlLtn() {
+      translate1 = "";
       const user = document.getElementById('input1').value;
       const userInput = user.toLowerCase();
       const Input = userInput.split('');
@@ -39,11 +40,17 @@
     }
 
    function FunctionAlBhed(value) {
+     let res = "";
+     if (charLatin.includes(value)) {
       let Latin = charLatin.indexOf(value);
-      translate1 = translate1 + charAlBhed[Latin];
+      res = charAlBhed[Latin];
+     } else {
+      res = value; }
+     translate1 = translate1 + res;
     }
 
    function trsnlAB() {
+      translate2 = "";
       const user = document.getElementById('input2').value;
       const userInput = user.toLowerCase();
       const Input = userInput.split('');
@@ -51,9 +58,15 @@
       document.getElementById("result2").textContent = translate2;
     }
 
+
    function FunctionLatin(value) {
+     let res = "";
+     if (charAlBhed.includes(value)) {
       let AlBhed = charAlBhed.indexOf(value);
-      translate2 = translate2 + charLatin[AlBhed];
+      res = charLatin[AlBhed];
+     } else {
+      res = value; }
+     translate2 = translate2 + res;
     }
   </script>
 </body>
