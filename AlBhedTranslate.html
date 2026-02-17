@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>Al Bhed Translate</title>
+</head>
+<body>
+  <h2>Al-Bhed Language Translator</h2>
+  <p>Al Bhed is a Final Fantasy X fictional language and a distinct, near-human race known for using forbidden machina technology. It serves as a secret language or substitution cipher for English (in the Western version), where letters are swapped to hide conversations from outsiders, adding depth to the game's world-building</p>
+  <form>
+    <label for="latin">Latin to Al-Bhed: </label><br>
+    <input type="text" id="input1" placeholder="Write Something...">
+    <button onclick="trsnlLtn()" type="button">Go Translate</button>
+    <h4>Result: </h4>
+    <p id="result1"></p>
+  </form>
+  <form>
+      <label for="latin">Al-Bhed to Latin: </label><br>
+      <input type="text" id="input2" placeholder="Write Something...">
+      <button onclick="trsnlAB()" type="button">Go Translate</button>
+      <h4>Result: </h4>
+      <p id="result2"></p>
+  </form>
+
+
+
+<!-- JavaScript code for encoding by matching Al-Bhed Lang with LAtin (based on Final Fantasy Wiki) -->
+  <script>
+
+   let translate1 = "";
+   let translate2 = "";
+   let charLatin = ["e","p","s","t","i","w","k","n","u","v","g","c","l","r","y","b","x","h","m","d","o","f","z","q","a","j"," "];
+   let charAlBhed = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "];
+
+   function trsnlLtn() {
+      const user = document.getElementById('input1').value;
+      const userInput = user.toLowerCase();
+      const Input = userInput.split('');
+      Input.forEach(FunctionAlBhed);
+      document.getElementById("result1").textContent = translate1;
+    }
+
+   function FunctionAlBhed(value) {
+      let Latin = charLatin.indexOf(value);
+      translate1 = translate1 + charAlBhed[Latin];
+    }
+
+   function trsnlAB() {
+      const user = document.getElementById('input2').value;
+      const userInput = user.toLowerCase();
+      const Input = userInput.split('');
+      Input.forEach(FunctionLatin);
+      document.getElementById("result2").textContent = translate2;
+    }
+
+   function FunctionLatin(value) {
+      let AlBhed = charAlBhed.indexOf(value);
+      translate2 = translate2 + charLatin[AlBhed];
+    }
+  </script>
+</body>
+</html>
