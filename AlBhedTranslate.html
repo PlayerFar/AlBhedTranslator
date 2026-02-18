@@ -1,10 +1,14 @@
 <html>
 <head>
   <title>Al Bhed Translate</title>
+  <link rel="stylesheet" href="design.css">
 </head>
 <body>
   <h2>Al-Bhed Language Translator</h2>
   <p>Al Bhed is a Final Fantasy X fictional language and a distinct, near-human race known for using forbidden machina technology. It serves as a secret language or substitution cipher for English (in the Western version), where letters are swapped to hide conversations from outsiders, adding depth to the game's world-building</p>
+ 
+  <!-- the form section of website -->
+
   <form>
     <label for="latin">Latin to Al-Bhed: </label><br>
     <input type="text" id="input1" placeholder="Write Something...">
@@ -20,6 +24,11 @@
       <p id="result2"></p>
   </form>
 
+  <footer>
+    <h4>Thank you for visiting!!</h4>
+    <p>Made by Farid Naufal Idlan</p>
+    <p><a href="https://github.com/PlayerFar">Github</a> | <a href="https://www.facebook.com/profile.php?id=100068449486786">Facebook</a> | <a href="https://www.instagram.com/farmyu/">Instagram</a> </p>
+  </footer>
 
 
 <!-- JavaScript code for encoding by matching Al-Bhed Lang with LAtin (based on Final Fantasy Wiki) -->
@@ -29,6 +38,8 @@
    let translate2 = "";
    let charLatin = ["e","p","s","t","i","w","k","n","u","v","g","c","l","r","y","b","x","h","m","d","o","f","z","q","a","j"," "];
    let charAlBhed = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "];
+
+<!-- Translate frm AlBhed to Latin -->
 
    function trsnlLtn() {
       translate1 = "";
@@ -48,6 +59,8 @@
       res = value; }
      translate1 = translate1 + res;
     }
+
+  <!-- Translate from AlBhed to Latin -->
 
    function trsnlAB() {
       translate2 = "";
