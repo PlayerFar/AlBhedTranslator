@@ -5,8 +5,7 @@
 </head>
 <body>
   <h2>Al-Bhed Language Translator</h2>
-  <p>Al Bhed is a Final Fantasy X fictional language and a distinct, near-human race known for using forbidden machina technology. It serves as a secret language or substitution cipher for English (in the Western version), where letters are swapped to hide conversations from outsiders, adding depth to the game's world-building</p>
- 
+
   <!-- the form section of website -->
 
   <form>
@@ -14,99 +13,33 @@
     <input type="text" id="input1" placeholder="Write Something...">
     <button onclick="trsnlLtn()" type="button">Go Translate</button>
     <h4>Result: </h4>
-    <p id="result1"></p>
+    <p id="result1">
+    </p>
   </form>
   <form>
       <label for="latin">Al-Bhed to Latin: </label><br>
       <input type="text" id="input2" placeholder="Write Something...">
       <button onclick="trsnlAB()" type="button">Go Translate</button>
       <h4>Result: </h4>
-      <p id="result2"></p>
+      <p id="result2">
+      </p>
   </form>
 
+  <h3>What is Al-Bhed?</h3>
+  <div id="desc">
+    <p>Al Bhed is a Final Fantasy X fictional language and a distinct, near-human race known for using forbidden machina technology. It serves as a secret language or substitution cipher for English (in the Western version), where letters are swapped to hide conversations from outsiders, adding depth to the game's world-building</p>
+  </div>
+  <div id="characteristics">
+    <p><b>Characteristics:</b></p>
+    <p>The Al Bhed have green eyes with spiral-shaped pupils. Regardless of skin color, all Al Bhed have blond hair (assuming they have hair). They are adept at swimming and holding their breath underwater, which serves them well during underwater excavations.</p>
+   <img src="assets/descpot.webp">
+  </div>
   <footer>
     <h4>Thank you for visiting!!</h4>
     <p>Made by Farid Naufal Idlan</p>
     <p><a href="https://github.com/PlayerFar">Github</a> | <a href="https://www.facebook.com/profile.php?id=100068449486786">Facebook</a> | <a href="https://www.instagram.com/farmyu/">Instagram</a> </p>
   </footer>
 
-
-<!-- JavaScript code for encoding by matching Al-Bhed Lang with LAtin (based on Final Fantasy Wiki) -->
-  <script>
-
-   let translate1 = "";
-   let translate2 = "";
-   let charLatin = ["e","p","s","t","i","w","k","n","u","v","g","c","l","r","y","b","x","h","m","d","o","f","z","q","a","j"," "];
-   let charAlBhed = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "];
-
-<!-- Functiopn for supports Upper/Lowercase -->
-  function checkCaps(item) {
-    if (item == item.toUpperCase()) {
-	  Caps = true;
-	 } else if (item == item.toLowerCase()) {
-	  Caps = false;
-	  }
-	 }
-	 
-<!-- Translate frm AlBhed to Latin -->
-
-   function trsnlLtn() {
-      translate1 = "";
-      const user = document.getElementById('input1').value;
-      const Input = user.split('');
-      Input.forEach(FunctionAlBhed);
-      document.getElementById("result1").textContent = translate1;
-    }
-
-   function FunctionAlBhed(value) {
-     let reslt = "";
-     let res = "";
-	 checkCaps(value);
-	 valueSml = value.toLowerCase();
-
-     if (charLatin.includes(valueSml)) {
-      let Latin = charLatin.indexOf(valueSml);
-      reslt = charAlBhed[Latin];
-	  if (Caps == true) {
-        res = reslt.toUpperCase();
-	  } else if (Caps == false) {
-	    res = reslt.toLowerCase();
-	  }
-     } else {
-      res = value; }
-     translate1 = translate1 + res;
-    }
-
-  <!-- Translate from AlBhed to Latin -->
-
-   function trsnlAB() {
-      translate2 = "";
-      const user = document.getElementById('input2').value;
-      const Input = user.split('');
-      Input.forEach(FunctionLatin);
-      document.getElementById("result2").textContent = translate2;
-    }
-
-
-   function FunctionLatin(value) {
-     let reslt = "";
-     let res = "";
-	 checkCaps(value);
-	 valueSml = value.toLowerCase();
-
-     if (charAlBhed.includes(valueSml)) {
-      let Latin = charAlBhed.indexOf(valueSml);
-      reslt = charLatin[Latin];
-	  if (Caps == true) {
-        res = reslt.toUpperCase();
-	  } else if (Caps == false) {
-	    res = reslt.toLowerCase();
-	  }
-     } else {
-      res = value; }
-     translate2 = translate2 + res;
-    }
-
-  </script>
+<script src="system.js"></script>
 </body>
 </html>

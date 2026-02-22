@@ -14,7 +14,23 @@ form {
   border-radius: 2vw;
 }
 
+label {
+  padding-top: 2vw;
+}
+
+#characteristics p, img {
+  display: block;
+  }
+#desc {
+  color: gray;
+}
+
 footer {
+background-color: gray;
+color: white;
+}
+footer a {
   margin-top: 0;
   padding: 0;
+  color: aqua;
 }
