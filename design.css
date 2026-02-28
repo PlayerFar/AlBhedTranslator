@@ -1,25 +1,41 @@
-
+html {
+	
+	background-color: #e0f7fa;
+}
 body {
   align-items: center;
   justify-content: center;
   text-align: center;
   padding-top: 2vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  border-radius: 2vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+header {
+	background-image: url("assets/bikanel.jpg");
+	background-position: center;
+	width: auto;
+	height: 20vw;
+	justify-content: center;
+	color: white;
+	align-items: center;
+}
+
+header p, h2 {
+	padding-top: 5vw;
 }
 
 form {
-  background-color: aqua;
-  border-radius: 2vw;
+  background-color: #b3e5fc;
 }
 
 label {
   padding-top: 2vw;
 }
 
-#characteristics p, img {
-  display: block;
+#characteristics p, figure {
+  display: inline-block;
+  color: gray;
   }
 #desc {
   color: gray;
