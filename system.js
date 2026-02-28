@@ -74,3 +74,17 @@
     }
 
 
+function copas1() {
+	var CopyInput = document.getElementById("result1");
+	CopyInput.select();
+	CopyInput.setSelectionRange(0, 99999);
+	navigator.clipboard.writeText(CopyInput.value);
+	alert("Copied the text: " + CopyInput.value);
+}
+function copas2() {
+	var CopyInput = document.getElementById("result2");
+	CopyInput.select();
+	CopyInput.setSelectionRange(0, 99999);
+	navigator.clipboard.writeText(CopyInput.value);
+	alert("Copied the text: " + CopyInput.value);
+}
