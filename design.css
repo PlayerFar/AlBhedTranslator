@@ -37,12 +37,36 @@ label {
   display: inline-block;
   color: gray;
   }
-#desc {
-  color: gray;
+
+figure {
+  display: inline-block;
 }
 
+#language, #specials, #desc { color: gray;}
+
+textarea {
+  width: 65vw;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px inset;
+  text-align: center;
+  margin: 0 auto;
+}
+th {
+  background-color: pink;
+}
+
+
 footer {
-background-color: gray;
+background-color: #8595aa;
 color: white;
 }
 footer a {

@@ -73,6 +73,7 @@
      translate2 = translate2 + res;
     }
 
+//Function for copy to clipboard feature
 
 function copas1() {
 	var CopyInput = document.getElementById("result1");
